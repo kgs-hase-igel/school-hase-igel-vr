@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import sc.player2018.logic.RandomLogic;
 import sc.plugin2018.AbstractClient;
 import sc.plugin2018.IGameHandler;
+import de.oltmannsdaniel.hui.MasterLogic;
 
 /**
  * Erlaubt es verschiedene Logiken zu verwenden und eine davon auszuwählen und
@@ -18,9 +19,12 @@ public enum LogicFactory {
 	// eingetragen wie im Beispiel eingetragen und ihre Klasse angegeben werden
 	RANDOM(RandomLogic.class),
 
+	// MasterLogic von uns
+	MASTER(MasterLogic.class),
+
 	// Die Logik die gewählt wird, wenn kein passender Eintrag zu der Eingabe
 	// gefunden wurde:
-	DEFAULT(RandomLogic.class);
+	DEFAULT(MasterLogic.class);
 
 	private Class<? extends IGameHandler> logic;
 	private static final Logger	logger = LoggerFactory
