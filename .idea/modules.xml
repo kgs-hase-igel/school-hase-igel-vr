@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/hase-igel-client.iml" filepath="$PROJECT_DIR$/hase-igel-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/school-hase-igel.iml" filepath="$PROJECT_DIR$/school-hase-igel.iml" />
     </modules>
   </component>
 </project>

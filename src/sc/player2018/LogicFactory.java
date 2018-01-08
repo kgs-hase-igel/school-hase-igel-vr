@@ -1,5 +1,7 @@
 package sc.player2018;
 
+import kgs.spieler.hui.CJTLogic;
+import kgs.spieler.hui.RITOJALogic;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,9 +24,12 @@ public enum LogicFactory {
 	// MasterLogic von uns
 	MASTER(MasterLogic.class),
 
+	CJT(CJTLogic.class),
+	RITOJA(RITOJALogic.class),
+
 	// Die Logik die gewählt wird, wenn kein passender Eintrag zu der Eingabe
 	// gefunden wurde:
-	DEFAULT(MasterLogic.class);
+	DEFAULT(RITOJALogic.class);
 
 	private Class<? extends IGameHandler> logic;
 	private static final Logger	logger = LoggerFactory

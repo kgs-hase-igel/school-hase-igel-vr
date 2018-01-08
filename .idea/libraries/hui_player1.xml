@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hui_player1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/zipped/hui_player.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
