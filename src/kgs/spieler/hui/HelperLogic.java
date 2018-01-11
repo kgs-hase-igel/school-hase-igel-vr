@@ -101,4 +101,25 @@ public class HelperLogic {
         public int getValue() { return value; }
         public Move getMove() { return move; }
     }
+
+    public ArrayList<Move> extractFallbackMoves(GameState gameState, int index, ArrayList<Move> possibleMoves) {
+        ArrayList<Move> fallbackMoves = new ArrayList<>();
+        Player currentPlayer = gameState.getCurrentPlayer();
+
+        for(Move move : possibleMoves) {
+            for(Action action : move.actions) {
+                if (action instanceof FallBack) {
+                    if (index > 56 /*letztes Salatfeld*/ && currentPlayer.getSalads() > 0) {
+                        // Falle nur am Ende (index > 56) zurück, außer du musst noch einen Salat loswerden
+                        fallbackMoves.add(move);
+                    } else if (index <= 56 && index - gameState.getPreviousFieldByType(FieldType.HEDGEHOG, index) < 5) {
+                        // Falle zurück, falls sich Rückzug lohnt (nicht zu viele Karotten aufnehmen)
+                        fallbackMoves.add(move);
+                    }
+                }
+            }
+        }
+
+        return fallbackMoves;
+    }
 }
