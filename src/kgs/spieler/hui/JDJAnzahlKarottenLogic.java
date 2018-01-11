@@ -20,7 +20,6 @@ import sc.shared.GameResult;
  * Das Herz des Simpleclients: Eine sehr simple Logik, die ihre Zuege zufaellig
  * waehlt, aber gueltige Zuege macht. Ausserdem werden zum Spielverlauf
  * Konsolenausgaben gemacht.
- * 
  */
 public class JDJAnzahlKarottenLogic implements IGameHandler {
     /**
