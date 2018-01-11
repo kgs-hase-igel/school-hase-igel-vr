@@ -21,6 +21,7 @@ import sc.shared.GameResult;
  * waehlt, aber gueltige Zuege macht. Ausserdem werden zum Spielverlauf
  * Konsolenausgaben gemacht.
  * 
+ * 
  */
 public class JDJAnzahlKarottenLogic implements IGameHandler {
     /**
